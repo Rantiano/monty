@@ -1,16 +1,16 @@
 #include "monty.h"
 
 /**
- * err - This prints the error messages determined by their error code.
- * @error_code: The error codes are shown below:
- * (1) => User doesn't give any file or more than one file to the program.
- * (2) => File provided is can not be read or opened.
- * (3) => File provided contains invalid instruction.
- * (4) => When rogram is unable to malloc more memory.
- * (5) => When parameter passed to the instruction "push" is not an int.
- * (6) => When stack it empty for pint.
- * (7) => When stack it empty for pop.
- * (8) => When stack is too short for the operation.
+ * err - Prints appropriate error messages based on their error code.
+ * @error_code: The error codes are as follows:
+ *   (1) => The user did not provide a file or provided more than one file to the program.
+ *   (2) => The file provided cannot be opened or read.
+ *   (3) => The file provided contains an invalid instruction.
+ *   (4) => Memory allocation (malloc) failure.
+ *   (5) => The parameter passed to the "push" instruction is not an integer.
+ *   (6) => The "pint" operation is called on an empty stack.
+ *   (7) => The "pop" operation is called on an empty stack.
+ *   (8) => The stack is too short for the operation.
  */
 void err(int error_code, ...)
 {
@@ -47,12 +47,12 @@ void err(int error_code, ...)
 }
 
 /**
- * more_err - this handles errors.
- * @error_code: The error codes are listed below:
- * (6) => When Stack it empty for pint.
- * (7) => When Stack it empty for pop.
- * (8) => When stack is too short for the operation.
- * (9) => A division by zero.
+ * more_err - Handles additional errors.
+ * @error_code: The error codes are as follows:
+ *   (6) => The "pint" operation is called on an empty stack.
+ *   (7) => The "pop" operation is called on an empty stack.
+ *   (8) => The stack is too short for the operation.
+ *   (9) => Division by zero.
  */
 void more_err(int error_code, ...)
 {
@@ -88,10 +88,10 @@ void more_err(int error_code, ...)
 }
 
 /**
- * string_err - This handles possible errors.
- * @error_code: The error codes are listed below:
- * (10) ~> When the number inside a node is outside ASCII bounds.
- * (11) ~> When the stack is empty.
+ * string_err - Handles string-related errors.
+ * @error_code: The error codes are as follows:
+ *   (10) ~> The number inside a node is outside ASCII bounds.
+ *   (11) ~> The stack is empty.
  */
 void string_err(int error_code, ...)
 {
